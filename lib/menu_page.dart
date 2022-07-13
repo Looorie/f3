@@ -59,7 +59,8 @@ class MenuPage extends StatelessWidget {
         final value = lineTouch.lineBarSpots![0].x;
         // flowVM.touchedIndex = value.toInt();
       });
-  final outSpotList = const [
+
+  final firstSpotList = const [
     FlSpot(0, 4),
     FlSpot(1, 3.5),
     FlSpot(2, 4.5),
@@ -73,7 +74,7 @@ class MenuPage extends StatelessWidget {
     FlSpot(10, 6),
     FlSpot(11, 7),
   ];
-  final inSpotList = const [
+  final secondSpotList = const [
     FlSpot(0, 0),
     FlSpot(1, 3),
     FlSpot(2, 4),
@@ -88,8 +89,8 @@ class MenuPage extends StatelessWidget {
     FlSpot(11, 8),
   ];
 
-  LineChartBarData get outLineChartBarData => LineChartBarData(
-        spots: outSpotList,
+  LineChartBarData get firstChartBarData => LineChartBarData(
+        spots: firstSpotList,
         isCurved: false,
         barWidth: 2,
         color: const Color(0xFF256FFF),
@@ -98,8 +99,8 @@ class MenuPage extends StatelessWidget {
         ),
       );
 
-  LineChartBarData get inLineChartBarData => LineChartBarData(
-      spots: inSpotList,
+  LineChartBarData get secondChartBarData => LineChartBarData(
+      spots: secondSpotList,
       isCurved: false,
       barWidth: 2,
       color: const Color(0xFFF2994A),
@@ -115,8 +116,8 @@ class MenuPage extends StatelessWidget {
       ));
 
   List<LineChartBarData> get lineBarsData => [
-        outLineChartBarData,
-        inLineChartBarData,
+        firstChartBarData,
+        secondChartBarData,
       ];
 
   FlTitlesData get titlesData => FlTitlesData(
